@@ -1,6 +1,6 @@
 # Info In, Book Out
 
-You can access the live site of our application by [clicking here](https://info340a-w20.github.io/project-iinbo/)
+You can access the live site of our application by [clicking here](https://info340a-w20.github.io/iinbo/)
 
 You can search a particular book that you want to rent/buy in the search box located at the top of the page. If you click on the categories, it will take you directly to the book search page with this specific category.
 
