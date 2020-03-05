@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Haoyang Chen, Yinan Guo">
+    <meta name="description"
+        content="The overarching goal of our application is to help students to find the cheapest book they want to buy quickly. ">
+    <meta name="keywords" content="INFO IN, BOOK OUT, book resale, used book buying, sell used books">
+    <link rel="icon" type="image/png" href="img/book-icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Info In, Book out</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light light-blue">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/book-icon.png" width="30" height="30" class="d-inline-block align-top" alt="Iinbo Logo"
+                    aria-hidden="true">
+                <span class="text-dark">Iinbo</span>
+            </a>
+            <span>
+                <i class="fa fa-inbox  d-xl-none d-lg-none account-icon-style text-dark" aria-label="inbox"></i>
+                <i class="fa fa-user-circle d-xl-none d-lg-none account-icon-style text-dark" aria-label="account"></i>
+                <i class="fa fa-star d-xl-none d-lg-none account-icon-style text-dark" aria-label="favorite"></i>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </span>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="searchpage.html">Search Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorite.html">Favorite</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="makeNewPost.html">Make New Post</a>
+                    </li>
+                </ul>
+                <a href="login.html"><i
+                        class="fa fa-user-circle d-none d-lg-block d-xl-block account-icon-style text-dark"><span
+                            class="pl-1">Account</span></i></a>
+
+                <!-- display search box on desktop -->
+                <form class="form-inline my-2 my-lg-0 d-none d-lg-block d-xl-block">
+                    <label for="search-book-box" class="d-none">Search: </label>
+                    <input id="search-book-box" class="form-control mr-sm-2" type="search"
+                        placeholder="Search for book">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
+                </form>
+            </div>
+        </nav>
+        <form class="input-group md-form form-sm form-2 pl-0 search-box-style d-xl-none d-lg-none">
+            <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search for book"
+                aria-label="Search for book" id="search-mobile-box">
+            <button id="search-mobile-btn" class="input-group-append" type="submit">
+                <span class="input-group-text" id="basic-text3"><i class="fa fa-search text-grey"
+                        aria-hidden="true"></i></span>
+            </button>
+        </form>
+
+    </header>
+
+    <main>
+        <!-- Banner Slider -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img class="first-slide" src="img/slider-img.jpg" alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1>Info In, Book Out</h1>
+                            <p>The overarching goal of our application is to help students to find the cheapest book
+                                they want to buy quickly</p>
+                            <p><a class="btn btn-lg btn-primary text-dark" href="searchpage.html" role="button">Search
+                                    Book</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img class="second-slide active" src="img/slider-img.jpg" alt="Second slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Info In, Book Out</h1>
+                            <p>The overarching goal of our application is to help students to find the cheapest book
+                                they want to buy quickly</p>
+                            <p><a class="btn btn-lg btn-primary text-dark" href="searchpage.html" role="button">Search
+                                    Book</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="third-slide" src="img/slider-img.jpg" alt="Third slide">
+                    <div class="container">
+                        <div class="carousel-caption text-right">
+                            <h1>Info In, Book Out</h1>
+                            <p>The overarching goal of our application is to help students to find the cheapest book
+                                they want to buy quickly</p>
+                            <p><a class="btn btn-lg btn-primary text-dark" href="searchpage.html" role="button">Search
+                                    Book</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Categories -->
+        <div class="container">
+            <div class="row">
+                <h2 class="col-sm">Categories</h2>
+            </div>
+            <!-- Category slider main container -->
+            <div class="swiper-container d-lg-none d-xl-none">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                        <div class="text-center  category-1">
+                            <img class="rounded-circle d-block" src="img/action-book.jpg" alt="action book">
+                            <a href="#" class="text-secondary" id="action"><span>Action</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                        <div class="text-center category-2">
+                            <img class="rounded-circle d-block" src="img/fairytale-book.jpg" alt="fairy tale book">
+                            <a href="#" class="text-secondary"><span>Fairy Tale</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                        <div class="text-center category-3">
+                            <img class="rounded-circle d-block" src="img/horror-book.jpg" alt="horror book">
+                            <a href="#" class="text-secondary"><span>Horror</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                        <div class="text-center category-4">
+                            <img class="rounded-circle d-block" src="img/romance-book.jpg" alt="romance book">
+                            <a href="#" class="text-secondary"><span>Romance</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                        <div class="text-center category-5">
+                            <img class="rounded-circle d-block" src="img/textbook.jpg" alt="textbook">
+                            <a href="#" class="text-secondary"><span>Textbook</span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                        <div class="text-center category-6">
+                            <img class="rounded-circle d-block" src="img/comic-book.jpg" alt="comic book">
+                            <a href="#" class="text-secondary"><span>Comic</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+            <!-- display categories only on screen size > lg devices-->
+            <div class="row d-none d-lg-flex d-xl-flex category-desktop">
+                <div class="col-lg-4 text-center">
+                    <img class="rounded-circle category1" src="img/action-book.jpg" alt="action book">
+                    <p class="category-btn"><a class="btn btn-secondary category1" href="#" role="button">Action »</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img class="rounded-circle category2" src="img/fairytale-book.jpg" alt="fairy tale book">
+                    <p class="category-btn"><a class="btn btn-secondary category2" href="#" role="button">Fairy Tale
+                            »</a></p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img class="rounded-circle category3" src="img/horror-book.jpg" alt="horror book">
+                    <p class="category-btn"><a class="btn btn-secondary category3" href="#" role="button">Horror »</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-4 d-none d-lg-flex d-xl-flex category-desktop">
+                <div class="col-lg-4 text-center">
+                    <img class="rounded-circle category4" src="img/romance-book.jpg" alt="romance book">
+                    <p class="category-btn"><a class="btn btn-secondary category4" href="#" role="button">Romance »</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img class="rounded-circle category5" src="img/textbook.jpg" alt="textbook">
+                    <p class="category-btn"><a class="btn btn-secondary category5" href="#" role="button">Textbook »</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img class="rounded-circle category6" src="img/comic-book.jpg" alt="comic book">
+                    <p class="category-btn"><a class="btn btn-secondary category6" href="#" role="button">Comic »</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Books Slider -->
+        <div id="popular-book-section" class="container">
+            <h2>Popular Books</h2>
+            <div class="row">
+                <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <!-- First Slide of the slider -->
+                        <div class="carousel-item active">
+                            <div class="d-none d-lg-block">
+                                <div class="slide-box">
+                                    <div class="row">
+                                        <!-- 4 items in a slider row -->
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book1.jpg" alt="book 1">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book2.jpg" alt="book 2">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book4.jpg" alt="book 4">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book5.jpg" alt="book 5">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 items in a slider row -->
+                            <div class="d-none d-md-block d-lg-none">
+                                <div class="slide-box">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book1.jpg" alt="book 1">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book2.jpg" alt="book 2">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book4.jpg" alt="book 4">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 items in a slider row -->
+                            <div class="d-none d-sm-block d-md-none">
+                                <div class="slide-box">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book1.jpg" alt="book 1">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book2.jpg" alt="book 2">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 item in a slider row -->
+                            <div class="d-block d-sm-none">
+                                <div class="card d-block w-100">
+                                    <img class="card-img-top" src="img/popular-book1.jpg" alt="book 1">
+                                    <div class="card-body">
+                                        <p class="card-text">Book Name</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second slide of the slider -->
+                        <div class="carousel-item">
+                            <div class="d-none d-lg-block">
+                                <div class="slide-box">
+                                    <div class="row">
+                                        <!-- 4 items in a slider row -->
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book1.jpg" alt="book 1">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book2.jpg" alt="book 2">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book4.jpg" alt="book 4">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book5.jpg" alt="book 5">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 items in a slider row -->
+                            <div class="d-none d-md-block d-lg-none">
+                                <div class="slide-box">
+                                    <div class="d-none d-md-block d-lg-none">
+                                        <div class="slide-box">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book1.jpg"
+                                                            alt="book 1">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book2.jpg"
+                                                            alt="book 2">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book4.jpg"
+                                                            alt="book 4">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 items in a slider row -->
+                            <div class="d-none d-sm-block d-md-none">
+                                <div class="slide-box">
+                                    <div class="d-none d-md-block d-lg-none">
+                                        <div class="slide-box">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book2.jpg"
+                                                            alt="book 2">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book4.jpg"
+                                                            alt="book 4">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 item in a slider row -->
+                            <div class="d-block d-sm-none">
+                                <div class="card d-block w-100">
+                                    <img class="card-img-top" src="img/popular-book2.jpg" alt="book 2">
+                                    <div class="card-body">
+                                        <p class="card-text">Book Name</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Picks For You Slider -->
+        <div class="container">
+            <h2>Top Picks For You</h2>
+            <div class="row">
+                <div id="carousel2" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel2" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <!-- First Slide of the slider -->
+                        <div class="carousel-item active">
+                            <div class="d-none d-lg-block">
+                                <div class="slide-box">
+                                    <div class="row">
+                                        <!-- 4 items in a slider row -->
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book5.jpg" alt="book 5">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book1.jpg" alt="book 1">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book2.jpg" alt="book 2">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book4.jpg" alt="book 4">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 items in a slider row -->
+                            <div class="d-none d-md-block d-lg-none">
+                                <div class="slide-box">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book5.jpg" alt="book 5">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book1.jpg" alt="book 1">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book2.jpg" alt="book 2">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 items in a slider row -->
+                            <div class="d-none d-sm-block d-md-none">
+                                <div class="slide-box">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book5.jpg" alt="book 5">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book1.jpg" alt="book 1">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 item in a slider row -->
+                            <div class="d-block d-sm-none">
+                                <div class="card d-block w-100">
+                                    <img class="card-img-top" src="img/popular-book5.jpg" alt="book 5">
+                                    <div class="card-body">
+                                        <p class="card-text">Book Name</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second slide of the slider -->
+                        <div class="carousel-item">
+                            <div class="d-none d-lg-block">
+                                <div class="slide-box">
+                                    <div class="row">
+                                        <!-- 4 items in a slider row -->
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book1.jpg" alt="book 1">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book5.jpg" alt="book 5">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book4.jpg" alt="book 4">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/popular-book2.jpg" alt="book 2">
+                                                <div class="card-body">
+                                                    <p class="card-text">Book Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 items in a slider row -->
+                            <div class="d-none d-md-block d-lg-none">
+                                <div class="slide-box">
+                                    <div class="d-none d-md-block d-lg-none">
+                                        <div class="slide-box">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book1.jpg"
+                                                            alt="book 1">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book5.jpg"
+                                                            alt="book 5">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book4.jpg"
+                                                            alt="book 4">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 items in a slider row -->
+                            <div class="d-none d-sm-block d-md-none">
+                                <div class="slide-box">
+                                    <div class="d-none d-md-block d-lg-none">
+                                        <div class="slide-box">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book1.jpg"
+                                                            alt="book 1">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="img/popular-book5.jpg"
+                                                            alt="book 5">
+                                                        <div class="card-body">
+                                                            <p class="card-text">Book Name</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 item in a slider row -->
+                            <div class="d-block d-sm-none">
+                                <div class="card d-block w-100">
+                                    <img class="card-img-top" src="img/popular-book4.jpg" alt="book 4">
+                                    <div class="card-body">
+                                        <p class="card-text">Book Name</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- copyright -->
+    <footer id="sticky-footer" class="py-4 bg-dark text-white mt-4">
+        <div class="container text-sm-center">
+            <small>Copyright &copy; Haoyang Chen, Yinan Guo</small>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="js/redirect.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            centeredSlides: false,
+            spaceBetween: 0,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // Navigation arrows
+            navigation: {
+                // nextEl: '.swiper-button-next',
+                // prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

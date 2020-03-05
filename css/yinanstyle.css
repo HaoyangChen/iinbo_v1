@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Pinyon+Script&display=swap');
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+.hid{
+    display:none;
+}
+
+.show{
+    display:block;
+}
+p {
+  margin-bottom: 0;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-size: 2rem;
+  /* margin: 25px 0px; */
+}
+
+h2 {
+  font-size: 1.2rem;
+  /* margin: 20px 0px; */
+}
+
+footer {
+  display: none;
+}
+
+a{
+  text-decoration: none;
+}
+.sell-form{
+    margin: auto;
+    text-align: center;
+    padding-top:20px;
+    width:70%;
+}
+
+
+.navbar-brand > span {
+  font-family: 'Pinyon Script', cursive;
+}
+.signin-form{
+    margin: auto;
+    text-align: center;
+    padding-top:20px;
+    width:70%;
+}
+.signin-form img{
+    width: 75px;
+    height: 75px;
+}
+.signup-box{
+    text-align: left;
+    margin-top:5px;
+    margin-bottom:20px;
+}
+.signup-box a{
+    color:black;
+}
+.login-title{
+    font-size: 2rem;
+    /* margin-top: 0px; */
+}
+.signin-form > input{
+    height:50px;
+}
+
+.search-card,
+.selection-collapse,
+.seller-info {
+    display: flex;
+}
+
+.search-result {
+    width: 90%;
+}
+
+.selection-collapse > p {
+    float: right;
+}
+
+.selection-collapse > a {
+    float: left;
+}
+
+.post-container,.search-container {
+    list-style: none;
+    margin: auto;
+    border: 1px solid #343a40;
+    padding: 10px 10px;
+    margin-bottom: 65px;
+}
+
+.search-box {
+    border: 1px solid yellow;
+    margin: 10px 10px;
+}
+
+.search-card {
+    margin-top: 10px;
+    border: 1px solid #f1f1f1;
+    padding: 2px;
+
+}
+
+.account-icon-style {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.change-page-buttons {
+    margin: auto;
+}
+
+.change-page-buttons a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.color-theme-btn{
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+.username{
+    color: #212529;
+    font-style: italic;
+}
+/* .change-page-buttons a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+.next-page {
+    color: black;
+}
+
+.previous-page {
+    margin-left: 30%;
+    color: black;
+}
+
+.cat-select {
+    margin: 5px 5px;
+}
+
+.search-box-style {
+    width: 91%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.search-result-img {
+    width: 40%;
+}
+
+.search-result-img > img {
+    max-width: 90%;
+}
+
+.search-info,
+.search-result-img {
+    display: inline-block;
+    max-width: 50%;
+}
+
+.search-info-title {
+    margin: 0 auto;
+}
+
+.item-price {
+    font-size: 2.5rem;
+}
+
+.card-title > a {
+    color: black;
+}
+
+.card-img-top {
+    height: 70%;
+}
+
+.bg-btn-iinbo, .del{
+    background-color: #f1f1f1;
+}
+@media (min-width: 768px) {
+    footer {
+        display: block;
+    }
+
+    .search-container {
+        width: 80%;
+    }
+    .signin-form{
+        width:55%;
+    }
+    .login-title{
+        font-size: 2rem;
+    }
+    /* h2 {
+        font-size: 1.4rem;
+        margin: 20px 0px;
+    } */
+
+    .account-icon-style {
+        font-size: 18px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    /* h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+    font-size: 1.5rem;
+    } */
+
+    .item-price {
+    font-size: 3.5rem;
+    }
+
+    .previous-page {
+    margin-left: 60%;
+    }
+
+    .search-container {
+    width: 60%;
+    }
+
+    .search-result-img > img {
+    width: auto;
+    max-width: 225px;
+    }
+    .signin-form{
+        max-width:350px;
+    }
+    .login-title{
+        font-size: 2.5rem;
+    }
+}

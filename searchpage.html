@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Haoyang Chen, Yinan Guo">
+    <meta name="description"
+        content="The overarching goal of our application is to help students to find the cheapest textbook they want to buy quickly. ">
+    <meta name="keywords" content="INFO IN, BOOK OUT, book resale, used book buying, sell used books">
+    <link rel="icon" type="image/png" href="img/book-icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/yinanstyle.css">
+    <title>Info In, Book out</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light light-blue">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/book-icon.png" width="30" height="30" class="d-inline-block align-top" alt="Iinbo Logo"
+                    aria-hidden="true">
+                <span class="text-dark">Iinbo</span>
+            </a>
+            <span>
+                <i class="fa fa-inbox  d-xl-none d-lg-none account-icon-style text-dark" aria-label="inbox"></i>
+                <i class="fa fa-user-circle d-xl-none d-lg-none account-icon-style text-dark" aria-label="account"></i>
+                <i class="fa fa-star d-xl-none d-lg-none account-icon-style text-dark" aria-label="favorite"></i>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </span>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="searchpage.html">Search Book<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorite.html">Favorite</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="makeNewPost.html">Make New Post</a>
+                    </li>
+                </ul>
+                <a href="login.html"><i
+                        class="fa fa-user-circle d-none d-lg-block d-xl-block account-icon-style text-dark"><span
+                            class="pl-1">Account</span></i></a>
+
+                <!-- display search box on desktop -->
+                <form class="form-inline my-2 my-lg-0 d-none d-lg-block d-xl-block" action="searchpage.html">
+                    <label for="search-book-box" class="d-none">Search: </label>
+                    <input id="search-book-box" class="form-control mr-sm-2" type="search"
+                        placeholder="Search for book">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
+                </form>
+            </div>
+        </nav>
+        <div class="input-group md-form form-sm form-2 pl-0 search-box-style d-xl-none d-lg-none">
+            <input id="search-box-responsive" class="form-control my-0 py-1 lime-border" type="text"
+                placeholder="Search" aria-label="Search for book">
+            <div class="input-group-append" id="search-btn-responsive">
+                <span class="input-group-text lime lighten-2" id="basic-text1">
+                    <i class="fa fa-search text-grey" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+        
+
+    </header>
+
+    <main>
+        <section>
+            <h1>Book Search Page</h1>
+            <form class="input-group md-form form-sm form-2 pl-0 mb-4 d-none d-lg-flex d-xl-flex">
+                <input id="search-form" class="form-control my-0 py-1 amber-border" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button id="search-form-submit" class="input-group-append" type="submit">
+                    <span class="input-group-text" id="basic-text2"><i class="fa fa-search text-grey" aria-hidden="true"></i></span>
+                </button>
+            </form>
+        </section>
+        <section>
+            <h2 id="search-result">Search result will be shown here</h2>
+        </section>
+    </main>
+
+    <!-- copyright -->
+    <footer id="sticky-footer" class="py-4 bg-dark text-white">
+        <div class="container text-sm-center">
+            <small>Copyright &copy; Haoyang Chen, Yinan Guo</small>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="js/searchPage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Pinyon+Script&display=swap');
+
+a.navbar-brand > span {
+    font-family: 'Pinyon Script', cursive;
+}
+
+.account-icon-style {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.search-box-style {
+    width: 91%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-item > img {
+    width: 100%;
+    height: 400px;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 25px 0px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 30px 0px;
+}
+
+footer {
+    display: none;
+}
+
+p.card-title > a {
+    color: black;
+}
+
+.card-img-top {
+    height: 70%;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.slide-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide-box .card {
+    height: 100%;
+}
+
+.slide-box .card-text {
+    text-align: center;
+}
+
+.d-block .card-text {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.carousel-caption .btn-primary {
+    /* background-color: #c3884a; */
+    background-color: #faa31b;
+    border-color: #faa31b;
+}
+
+.category-btn {
+    margin-top: 20px;
+}
+
+.category-btn > .btn-secondary {
+    background-color: #faa31b;
+    border-color: #faa31b;
+    color: black;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 180px;
+}
+
+.rounded-circle {
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-outline-success {
+    border-color: #faa31b;
+    color: black;
+}
+
+.btn-outline-success:hover {
+    background-color: #faa31b;
+    border-color: #faa31b;
+}
+
+.category-desktop .rounded-circle:hover {
+    cursor: pointer;
+}
+
+/* .swiper-button-prev {
+    left: 5px;
+}
+
+.swiper-button-next {
+    right: 5px;
+} */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .slide-box img {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        /* max-width: 50%; */
+    }
+}
+
+@media (min-width: 768px) {
+    footer {
+        display: block;
+    }
+
+    .account-icon-style {
+        /* font-size: 30px; */
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .slide-box img {
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        /* max-width: 33.3333%; */
+    }
+
+    .carousel-item > img {
+        height: 550px;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .slide-box img {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        /* max-width: 25%; */
+    }
+
+    .rounded-circle {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+.carousel-caption {
+    padding: 20px;
+    border-radius: .5rem;
+}
