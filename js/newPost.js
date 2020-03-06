@@ -4,7 +4,6 @@ var postboard;
 
 class Card{
     constructor(item,id=0) {
-        console.log(item);
         this.id = id;
         this.item = item;
         this.authors =  $('#FinalBookAuthor').val();
@@ -12,7 +11,6 @@ class Card{
         this.topic = $('#FinalTopic').val();
         this.condition = $('#Condition').val();
         this.descr = $('#moreDescription').val();
-        console.log($('#moreDescription').val());
     }
     getid(){
         return this.id;
@@ -74,7 +72,6 @@ class Card{
 
             let descrName = "Description: "
             descrName += this.descr;
-            console.log("Descr is " + this.descr);
             let descr = $("<p>").append(document.createTextNode(descrName));
             searchInfo.append(descr);
 
@@ -91,12 +88,8 @@ class Card{
     }
 
     removeLiJQ(btnID) {
-        console.log("btnID");
-        console.log(btnID);
         var sc = $(btnID).parent().parent();
-        console.log(sc);
         sc.remove();
-        console.log("removed");
     }
 
 
@@ -104,20 +97,16 @@ class Card{
 class PostBoard{
     //elelemtns are array of Card
     constructor(elements) {
-        console.log(elements);
         this.elements = elements;
         this.countID =0;
     }
     addToElement(child){
         child.setid(this.countID);
         this.countID = this.countID + 1;
-        console.log("child.id"+child.id);
         this.elements.push(child);
     }
     removeElement(rid){
         this.elements = this.elements.filter(child => rid !== child.id)
-        console.log("removeElement");
-        console.log(this.elements);
     }
     cleanPostBoard(){
         let postboardid =$( "#post-place" )
@@ -125,7 +114,6 @@ class PostBoard{
     }
     render(){
         this.cleanPostBoard();
-        console.log(this.elements);
         let postboardid =$( "#post-place" )
         for (var i = 0; i < this.elements.length; i++) {
             postboardid.append(this.elements[i].render());
@@ -134,7 +122,6 @@ class PostBoard{
 }
 class CardItem {
   constructor(item) {
-      console.log(item);
     this.item = item;
     this.state = {
     title :'',
@@ -171,7 +158,6 @@ class CardItem {
       let authorName = "Author(s): "
       if (this.item.volumeInfo.authors) {
           let authorNameArray = this.item.volumeInfo.authors;
-          // console.log(authorNameArray);
           authorName += authorNameArray[0];
           for (let i = 0; i < authorNameArray.length; i++) {
               authorName += ", " + authorNameArray[i];
@@ -253,9 +239,6 @@ class CardItem {
           $('#FinalBookAuthor').val(this.state.authors);
           $('#BookPrice').val(this.state.price) ;
           card = new Card(this.item);
-          console.log("card");
-          console.log(card);
-          alert("newCardCreated");
       });
       searchInfo.append(choseInfoBtn);
   }
@@ -274,7 +257,6 @@ window.onload=function() {
         let bookName = $('#BookName').val();
         let authorName = $('#BookAuthor').val();
         let bookUrl = getBookURL(bookName,authorName);
-        console.log(bookUrl);
 
         hidForm1Element();
         getData(bookUrl);
@@ -299,7 +281,6 @@ function cleanSearchBoard(){
 }
 function hidForm2Element(){
     $("#final-submittion").addClass("hid") ;
-    console.log("Form2 all Hiden");
     $("#sell-book-form").removeClass("hid") ;
 }
 
@@ -307,12 +288,10 @@ function hidForm1Element(){
 //    document.getElementById("sell-book-form").innerHTML = "";
     $("#sell-book-form").addClass("hid") ;
     $("#search-place").removeClass("hid") ;
-    console.log("Form all Hiden");
 }
 function hidAllUl(){
     $("#search-place").addClass("hid");
     $("#final-submittion").removeClass("hid");
-    console.log("UL all Hiden");
 }
 
 
@@ -333,9 +312,7 @@ function getData(url) {
     return false;
 }
 function renderSearchResults(response){
-    console.log(response);
     let items = response.items;
-    console.log(items);
     if ($('.search-container').length === 0) {
         let ul = $("<ul>");
         ul.addClass('search-container');
